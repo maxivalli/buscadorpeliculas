@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+/* Estilos generales */
+body {
+  font-family: "Comfortaa";
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: url(../assets/back.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#root {
+  display: grid;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+}
+
+h1 {
+  color: aliceblue;
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+form {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 270px;
+  height: 35px;
+  font-size: 16px;
+  border-radius: 10px;
+  padding-left: 15px;
+  margin-bottom: 40px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  width: 80px;
+  height: 38px;
+  background-color: rgb(190, 0, 0);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: rgb(139, 0, 0);
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.movie-card {
+  display: grid;
+  width: 200px;
+  background-color: rgb(35, 35, 35);
+  color: aliceblue;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 200ms;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.movie-card h2 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.movie-card h3 {
+  font-size: 12px;
+  color: gray;
+}
+
+.movie-card p {
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: aliceblue;
+}
+
+.detail-container {
+  display: grid;
+  justify-self: center;
+  width: 300px;
+  height: 100%;
+  background-color: rgba(35, 35, 35, 0.8);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.detail-container p {
+  color: aliceblue;
+}
+
+.detailh2 {
+  color: aliceblue;
+} 
+
+.detailP {
+  color: aliceblue;
+}
+
+.buttonSinopsis {
+  display: grid;
+  background-color: grey;
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 12px;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  align-content: center;
+  justify-self: center;
+  margin-top: 15px;
+}
+
+.buttonSinopsis:hover {
+  background-color: rgb(102, 100, 100);
+}
+
+.buttonSinopsis2 {
+  display: grid;
+  background-color: rgb(190, 0, 0);
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 12px;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  align-content: center;
+  justify-self: center;
+  margin-top: 15px;
+}
+
+.buttonSinopsis2:hover {
+  background-color: rgb(139, 0, 0) ;
+}
+
+
+
+/* Estilos para móviles */
+@media (max-width: 600px) {
+  h1 {
+    margin-top: 40px;
+    font-size: 20px;
+    justify-self: center;
+  }
+
+  input[type="text"] {
+    width: 200px;
+  }
+
+  .movie-list {
+    justify-self: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .movie-card {
+    width: 125px;
+  }
+
+  .movie-card img {
+    width: 100%;
+  }
+
+  .movie-card h2 {
+    font-size: 14px;
+  }
+
+  .movie-card h3 {
+    font-size: 10px;
+    color: gray;
+  }
+
+  .sinopsis {
+    margin-right: 10px;
+  }
+}
