@@ -158,6 +158,19 @@ button:hover {
   background-color: rgb(139, 0, 0) ;
 }
 
+.footer {
+  display: grid;
+}
+
+footer {
+  color: aliceblue;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  justify-self: center;
+  background-color: rgb(35, 35, 35);
+}
+
 
 
 /* Estilos para móviles */

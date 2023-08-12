@@ -63,6 +63,11 @@ export const BuscadorPeliculas = ({ peliculas, updatePeliculas }) => {
           </div>
         ))}
       </div>
+      <div className="footer">
+        <footer>
+          <p>Maxi Valli. Derechos reservados ©</p>
+        </footer>
+      </div>
     </div>
   );
 };

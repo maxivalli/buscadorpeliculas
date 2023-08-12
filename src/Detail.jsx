@@ -35,6 +35,11 @@ export const Detail = () => {
       ) : (
         <p>Cargando detalles de la película...</p>
       )}
+      <div className="footer">
+        <footer>
+          <p>Maxi Valli. Derechos reservados ©</p>
+        </footer>
+      </div>
     </div>
   );
 };
