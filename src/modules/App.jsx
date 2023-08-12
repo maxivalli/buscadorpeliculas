@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { BuscadorPeliculas } from "./BuscadorPeliculas";
-import { Detail } from "./Detail";
-import { Navbar } from "./Navbar";
-import { About } from "./About"
-import { Contacto } from "./Contacto"
-import logo from "./assets/logo.gif"
+import { Detail } from "../modules/Detail";
+import { Navbar } from "../modules/Navbar";
+import { About } from "../views/About"
+import { Contacto } from "../views/Contacto"
+import logo from "../assets/logo.gif"
 
 export const App = () => {
   const [peliculas, setPeliculas] = useState([]);

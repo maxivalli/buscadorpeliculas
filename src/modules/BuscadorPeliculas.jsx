@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import imagenGenerica from "./assets/imagen.png";
+import imagenGenerica from "../assets/imagen.png";
 
 export const BuscadorPeliculas = ({ peliculas, updatePeliculas }) => {
   const urlBase = "https://api.themoviedb.org/3/search/movie";
