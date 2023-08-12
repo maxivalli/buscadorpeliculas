@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export const Detail = () => {
-
   const { id } = useParams();
   const [pelicula, setPelicula] = useState(null);
   const API_KEY = import.meta.env.VITE_API_KEY;
@@ -25,21 +24,28 @@ export const Detail = () => {
   }, [id, API_KEY]);
 
   return (
+    <div className="container">
     <div className="detail-container">
       {pelicula ? (
         <>
           <h2 className="detailh2">{pelicula.title}</h2>
-          <p className="detailP">{pelicula.overview}</p>
-          <Link className="buttonSinopsis2" to="/buscadorpeliculas">Volver</Link>
+          <p className="detailP">
+            {pelicula.overview ? pelicula.overview : "No disponible"}
+          </p>
+          <Link className="buttonSinopsis2" to="/buscadorpeliculas">
+            Volver
+          </Link>
         </>
       ) : (
         <p>Cargando detalles de la película...</p>
       )}
-      <div className="footer">
-        <footer>
-          <p>Maxi Valli. Derechos reservados ©</p>
-        </footer>
-      </div>
+      
     </div>
+    <div className="footer">
+    <footer>
+      <p>Maxi Valli. Derechos reservados ©</p>
+    </footer>
+  </div>
+  </div>
   );
 };

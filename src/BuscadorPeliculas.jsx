@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
+import imagenGenerica from './assets/imagen.png'
 
 export const BuscadorPeliculas = ({ peliculas, updatePeliculas }) => {
   const urlBase = "https://api.themoviedb.org/3/search/movie";
@@ -54,9 +55,13 @@ export const BuscadorPeliculas = ({ peliculas, updatePeliculas }) => {
         {peliculas.map((pelicula) => (
           <div key={pelicula.id} className="movie-card">
             <img
-              src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
-              alt={pelicula.title}
-            />
+        src={
+          pelicula.poster_path
+            ? `https://image.tmdb.org/t/p/w500${pelicula.poster_path}`
+            : imagenGenerica
+        }
+        alt={pelicula.title}
+      />
             <h2>{pelicula.title}</h2>
             <h3>Estreno: {pelicula.release_date}</h3>
             <Link className='buttonSinopsis' to={`/detail/${pelicula.id}`}>ver sinopsis</Link>

@@ -14,10 +14,7 @@ export const App = () => {
     <>
       <h1>Buscador de películas</h1>
       <Routes>
-        <Route
-          path="/buscadorpeliculas"
-          element={<BuscadorPeliculas peliculas={peliculas} updatePeliculas={updatePeliculas} />}
-        ></Route>
+        <Route path="/buscadorpeliculas" element={<BuscadorPeliculas peliculas={peliculas} updatePeliculas={updatePeliculas} />}></Route>
         <Route path="/detail/:id" element={<Detail peliculas={peliculas} />}></Route>
         <Route path="/*" element={<Navigate to="/" />}></Route>
       </Routes>
